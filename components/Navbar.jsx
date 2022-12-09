@@ -6,6 +6,7 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
@@ -116,7 +117,7 @@ const Navbar = () => {
             </ul>
 
             <div className="pt-40 mobile-icons">
-              <p className="uppercase tracking-widest">Let's Connect</p>
+              <p className="uppercase tracking-widest">Lets Connect</p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <div className="rounded-full shadow-lg shadow-amber-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300 bg-[#1e3f71]">
                   <FaLinkedinIn />
