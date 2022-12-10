@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import ProjectItem from "./ProjectItem";
 
@@ -18,10 +16,10 @@ const Projects = () => {
         <h2 className="py-4">What I Have Built</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {/* Individual component to keep clean code (ProjectItem) */}
-          <ProjectItem title="Code Flow" backgroundImg={CodeFlow} techUsed='MERN Stack' projectUrl="/property"/>
-          <ProjectItem title="PhotoPort" backgroundImg={PhotoPort} techUsed='React.js' projectUrl="/property"/>
-          <ProjectItem title="Twitch" backgroundImg={Twitch} techUsed='Next.js, NextAuth, Tailwind' projectUrl="/property"/>
-          <ProjectItem title="WatchItLater" backgroundImg={WatchItLater} techUsed='MERN Stack' projectUrl="/property"/>
+          <ProjectItem title="Code Flow" backgroundImg={CodeFlow} techUsed='MERN Stack' projectUrl="/codeflow"/>
+          <ProjectItem title="PhotoPort" backgroundImg={PhotoPort} techUsed='React.js' projectUrl="/photoport"/>
+          <ProjectItem title="Twitch" backgroundImg={Twitch} techUsed='Next.js, NextAuth, Tailwind' projectUrl="/twitch"/>
+          <ProjectItem title="WatchItLater" backgroundImg={WatchItLater} techUsed='MERN Stack' projectUrl="/watchitlater"/>
         </div>
       </div>
     </div>

@@ -5,10 +5,29 @@ import TreadLogo from "../public/assets/Treadwell-Logo.png";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState('#1e3f71');
+  const [linkColor, setLinkColor] = useState('#1f2937');
+  const router = useRouter()
+
+  useEffect(()=> {
+   if(
+    router.asPath === '/codeflow' ||
+    router.asPath === '/photoport' ||
+    router.asPath === '/twitch' ||
+    router.asPath === '/watchitlater'
+   ) {
+    setNavBg('transparent')
+    setLinkColor('#1e3f71')
+   } else{
+    setNavBg('#1e3f71')
+    setLinkColor('#1f2937')
+   }
+  },[router])
 
   const handleNav = () => {
     setNav(!nav);
@@ -28,6 +47,7 @@ const Navbar = () => {
   return (
     // NAV Bar
     <div
+    style={{backgroundColor: `${navBg}`}}
       className={
         shadow
           ? "fixed w-full h-20 shadow-xl z-[100]"
@@ -46,7 +66,7 @@ const Navbar = () => {
         </Link>
 
         <div>
-          <ul className="hidden md:flex">
+          <ul style={{color:`${linkColor}`}} className="hidden md:flex">
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:text-xl hover:border-b">
                 Home
@@ -97,6 +117,7 @@ const Navbar = () => {
           <div>
             {/* top part of mobile menu */}
             <div className="flex w-full items-center justify-between">
+              <Link href='/'>
               <Image
                 src={TreadLogo}
                 alt="/"
@@ -104,6 +125,8 @@ const Navbar = () => {
                 height="35"
                 style={{ marginTop: "25px" }}
               />
+              </Link>
+              
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-amber-400 p-3 cursor-pointer bg-[#1e3f71] "
@@ -120,19 +143,19 @@ const Navbar = () => {
           <div className="py-4 flex flex-col">
             <ul id="mobile-list" className="uppercase">
               <Link href="/">
-                <li className="py-4 text-sm">Home</li>
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Home</li>
               </Link>
-              <Link href="/">
-                <li className="py-4 text-sm">About</li>
+              <Link href="/#about">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">About</li>
               </Link>
-              <Link href="/">
-                <li className="py-4 text-sm">Skills</li>
+              <Link href="/#skills">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Skills</li>
               </Link>
-              <Link href="/">
-                <li className="py-4 text-sm">Projects</li>
+              <Link href="/#projects">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Projects</li>
               </Link>
-              <Link href="/">
-                <li className="py-4 text-sm">Contact</li>
+              <Link href="/#contact">
+                <li onClick={()=> setNav(false)} className="py-4 text-sm">Contact</li>
               </Link>
             </ul>
 
