@@ -1,6 +1,6 @@
 import Image from "next/legacy/image";
 import React from "react";
-import CodeFlow from "../public/projects/Code-Flow.jpg";
+import codeFlowImg from "../public/projects/Code-Flow.jpg";
 import { RiRadioButtonFill } from "react-icons/ri";
 import Link from "next/link";
 
@@ -13,7 +13,7 @@ const codeflow = () => {
           className="absolute z-1"
           layout="fill"
           objectFit="cover"
-          src={CodeFlow}
+          src={codeFlowImg}
           alt="/"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] z-10 p-2">

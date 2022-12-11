@@ -11,7 +11,7 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState('#1e3f71');
-  const [linkColor, setLinkColor] = useState('#1f2937');
+  
   const router = useRouter()
 
   useEffect(()=> {
@@ -22,10 +22,10 @@ const Navbar = () => {
     router.asPath === '/watchitlater'
    ) {
     setNavBg('transparent')
-    setLinkColor('#1e3f71')
+    
    } else{
     setNavBg('#1e3f71')
-    setLinkColor('#1f2937')
+   
    }
   },[router])
 
@@ -66,7 +66,7 @@ const Navbar = () => {
         </Link>
 
         <div>
-          <ul style={{color:`${linkColor}`}} className="hidden md:flex">
+          <ul className="hidden md:flex">
             <Link href="/">
               <li className="ml-10 text-sm uppercase hover:text-xl hover:border-b">
                 Home
