@@ -5,7 +5,7 @@ import React from "react";
 import CSS from "../public/assets/images/tech-logos/css.png";
 import HTML from "../public/assets/images/tech-logos/html.png";
 import JavaScript from "../public/assets/images/tech-logos/javascript.png";
-import Mongo from "../public/assets/images/tech-logos/mongo.png";
+import MongoDB from "../public/assets/images/tech-logos/mongo.png";
 import Node from "../public/assets/images/tech-logos/node.png";
 import Reactimg from "../public/assets/images/tech-logos/react.png";
 import Tailwind from "../public/assets/images/tech-logos/tailwind.png";
@@ -76,7 +76,7 @@ const Skills = () => {
             <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
               <div className='grid grid-cols-2 gap-4 justify-center items-center'>
                 <div className='m-auto'>
-                  <Image src={Mongo} width='64px' height='64px' alt='/' />
+                  <Image src={MongoDB} width='64px' height='64px' alt='/' />
                 </div>
                 <div className='flex flex-col items-center justify-center'>
                   <h3>Mongo</h3>
