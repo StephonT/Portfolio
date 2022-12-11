@@ -1,7 +1,9 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+
 
 const Main = () => {
   return (
@@ -28,16 +30,13 @@ const Main = () => {
           </p>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <div className="rounded-full shadow-lg shadow-amber-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#1e3f71]">
-              <FaLinkedinIn />
+              <Link href='https://www.linkedin.com/in/stephon-treadwell/' target='_blank'><FaLinkedinIn /></Link>
             </div>
             <div className="rounded-full shadow-lg shadow-amber-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#1e3f71]">
-              <FaGithub />
+              <Link href='https://github.com/StephonT' target='_blank'><FaGithub /></Link>
             </div>
             <div className="rounded-full shadow-lg shadow-amber-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#1e3f71]">
-              <AiOutlineMail />
-            </div>
-            <div className="rounded-full shadow-lg shadow-amber-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300 bg-[#1e3f71]">
-              <BsFillPersonLinesFill />
+              <Link href='mailto: streadwe@gmail.com'><AiOutlineMail /></Link>
             </div>
           </div>
         </div>
