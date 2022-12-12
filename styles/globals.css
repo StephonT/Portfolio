@@ -4,7 +4,12 @@
 
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+
+}
+
+.scroll-margin {
+  scroll-margin-top: 3rem;
 }
 
 
@@ -21,6 +26,8 @@ html {
   h1{
     @apply text-4xl sm:text-5xl md:text-6xl
   }
+
+  
 
   h2{
     @apply text-3xl sm:text-4xl

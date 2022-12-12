@@ -16,7 +16,7 @@ import Nextjs from "../public/assets/images/tech-logos/nextjs.png"
 const Skills = () => {
 
     return (
-      <div id='skills' className='w-full lg:h-screen p-2'>
+      <div id='skills' className='w-full lg:h-screen p-2 scroll-margin'>
         <div className='max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
           <p className='text-xl tracking-widest uppercase text-white'>
             Skills
